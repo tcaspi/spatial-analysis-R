@@ -61,7 +61,7 @@ par(mar=c(2,2,1,1))
 
 #Background
 
-Raster or **gridded** data are stored as a grid of value which are rendered on a map as pixels. Each pixel value represents an area on the Earth's surface.
+Raster or **gridded** data are stored as a grid of values which are rendered on a map as pixels. Each pixel value represents an area on the Earth's surface.
 
 
 ```{r, echo=FALSE}
@@ -77,7 +77,7 @@ Some examples of raster data include oceanographic datasets such as Sea Surface 
 ```{r ,echo=FALSE}
 img <- readPNG('images/examples.png')
  grid.raster(img)
-```
+==```
 
 
 ##What is a GeoTIFF??
@@ -101,7 +101,7 @@ There are a lot of spatial packages for R, we will touch on some of them here bu
 
 * **raster:** Reading, writing, manipulating, analyzing and modeling of gridded spatial data  
 * **rgdal:** Provides the most important and basic spatial functionalities. Provides bindings to Frank Warmerdam’s Geospatial Data Abstraction Library (GDAL) (>= 1.6.3, < 2) and access to projection/transformation operations from the PROJ.4 library   
-* **sf** and **sp** are the most important R packages to handle vector data; **sf** is a successor of **sp**, but it's still evolvin
+* **sf** and **sp** are the most important R packages to handle vector data; **sf** is a successor of **sp**, but it's still evolving
 * **rgeos:** Provides spatial vector operations like buffer and intersect. Interface to Geometry Engine – Open Source (GEOS) using the C API for topology operations on geometries.  
 * **maps**: This package has pre-loaded maps stored which can be added to your map plots. 
 * **maptools:** tools for reading and writing spatial data (visualisation)  
@@ -311,8 +311,8 @@ Here you can see the difference:
 ```{r resample,message=F,warning=F,quiet=T,verbose=F,results=F}
 
 #include progress='text' in any raster function to see a progress bar as the function runs! This is one of my favorite R things!
-npp_res = resample(nppCrop, sstAvg, method='ngb')#,progress='text')
-npp_bil = resample(nppCrop, sstAvg, method='bilinear')#,progress='text')
+npp_res = resample(nppCrop, sstAvg, method='ngb', progress='text')
+npp_bil = resample(nppCrop, sstAvg, method='bilinear', progress='text')
 
 par(mfrow=c(1,2))
 plot(npp_res);plot(npp_bil)
