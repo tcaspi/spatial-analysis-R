@@ -247,7 +247,7 @@ plot(ak_mgmt["total_pop"])
 
 Notice that the region geometries were combined into a single polygon for each management area.
 
-If we don't want to combine geometries, we can specifcy `do_union = F` as an argument.
+If we don't want to combine geometries, we can specify `do_union = F` as an argument.
 
 ```{r}
 ak_mgmt <- ak_pop_sf %>% 
